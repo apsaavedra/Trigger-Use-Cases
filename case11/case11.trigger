@@ -2,7 +2,7 @@ trigger AccountTrigger on Account (after insert, before update, after update) {
 
     if(Trigger.isAfter && Trigger.isInsert) {
       //Create Contact records based on Create N Contacts field on Account
-      AccountTriggerHandle.handleContactCreationAfterInsert(Trigger.NEW);
+      AccountTriggerHandle.handleContactCreationAfterInsert(Trigger.NEW); //Use Case 11
     }
 	
     if(Trigger.isBefore && Trigger.isUpdate) {
