@@ -6,7 +6,7 @@ public class LeadTriggerHandler {
         for(Lead leadRecord : newLeads) {
             Task taskRecord = New Task();
             taskRecord.OwnerId = leadRecord.OwnerId;
-            taskRecord.WhoId = leadRecord.Id;
+            taskRecord.WhoId = leadRecord.Id; //WhoId is for objects that represent humans, like contacts and leads, and WhatId is for non-human ones, like opportunities
             taskRecord.Status = 'Not Started';
             taskRecord.Description = 'Follow up with customer';
             taskRecord.Subject = 'Customer follow-up';
