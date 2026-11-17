@@ -3,7 +3,7 @@ public class OpportunityTriggerHandler {
     public static void handleOppAmountBeforeUpdate(List<Opportunity> newOppRecords, Map<Id, Opportunity> oldOppRecords) {
         
         for(Opportunity newOpp : newOppRecords) {
-            If(oldOppRecords.get(newOpp.Id).StageName != newOpp.StageName) {
+            if(oldOppRecords.get(newOpp.Id).StageName != newOpp.StageName) {
                 newOpp.Amount = newOpp.Probability * newOpp.ExpectedRevenue;
             }
         }
