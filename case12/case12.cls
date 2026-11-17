@@ -2,7 +2,7 @@ public class LeadTriggerHandler {
 
     public static void handleNoDeletingBeforeDelete(List<Lead> newLeads) {
         for (Lead leadRecord : newLeads) {
-            if (leadRecord.Status == 'Working - Contacted') {
+            if (leadRecord.Status == 'Working-Contacted') {
                 leadRecord.addError('If Lead status is Working-contacted, it cannot be deleted');
             }
         }
