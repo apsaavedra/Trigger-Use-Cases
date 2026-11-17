@@ -1,7 +1,8 @@
 public class OpportunityTriggerHandler {
 
     public static void handleActivitiesAfterInsert() {}
-    
+
+    //parameter is of list type as the triggers are bulkified
     public static void handleActivitiesAfterUpdate(List<Opportunity> newOpportunities) {
         List<Task> newTaskOpp = new List<Task>();
         
